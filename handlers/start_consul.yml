@@ -1,5 +1,6 @@
 ---
 - name: Start consul on Unix
+  become: true
   ansible.builtin.service:
     name: "{{ consul_systemd_service_name }}"
     state: started
